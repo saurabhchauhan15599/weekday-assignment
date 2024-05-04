@@ -7,3 +7,5 @@
 3. To run application on your local system `npm run dev`
 
 ## Made by Saurabh Chauhan
+
+Hosted URL - [text](https://weekday-assignment-sc.vercel.app/)https://weekday-assignment-sc.vercel.app/
