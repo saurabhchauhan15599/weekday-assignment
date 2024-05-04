@@ -1,0 +1,10 @@
+@import "../../styles/resources";
+
+.loadingWrapper {
+  @include typoGraphy(null, 400, 16px, null, null, $color-grey-6);
+  flex-grow: 1;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
