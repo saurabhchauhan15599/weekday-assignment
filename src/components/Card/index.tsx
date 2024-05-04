@@ -38,7 +38,7 @@ const Card: React.FC<ICard> = ({ ref }) => {
     companyName: "",
   });
 
-  const { currentPage, hasNext } = pageOptions;
+  const { currentPage } = pageOptions;
 
   const fetchData = useCallback(
     async ({
@@ -72,14 +72,13 @@ const Card: React.FC<ICard> = ({ ref }) => {
     [currentPage]
   );
 
-  const { data, error, fetchNextPage, hasNextPage, isFetching } =
-    useInfiniteQuery({
-      queryKey: ["jobPosts"],
-      queryFn: fetchData,
-      initialPageParam: 0,
-      getNextPageParam: (lastPage) => lastPage.nextPage,
-      refetchOnMount: false,
-    });
+  const { error, fetchNextPage, hasNextPage, isFetching } = useInfiniteQuery({
+    queryKey: ["jobPosts"],
+    queryFn: fetchData,
+    initialPageParam: 0,
+    getNextPageParam: (lastPage) => lastPage.nextPage,
+    refetchOnMount: false,
+  });
 
   const applyFilters = (data: IData[], filters: IFilters) => {
     return data?.filter((item) => {
