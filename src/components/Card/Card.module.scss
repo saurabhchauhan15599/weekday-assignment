@@ -1,19 +1,24 @@
 @import "../../styles/resources";
-
-.cardContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.container {
+  @include displayFlex(column);
   row-gap: 1rem;
-  column-gap: 1rem;
+  padding-left: 2rem;
 
-  .card {
-    max-width: 360px;
-    @include displayFlex(column);
-    background-color: (255, 255, 255);
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px;
-    padding: 1rem;
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
+    column-gap: 1rem;
+
+    .card {
+      max-width: 360px;
+      @include displayFlex(column);
+      background-color: (255, 255, 255);
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px;
+      padding: 1rem;
+      row-gap: 1rem;
+    }
   }
 }
 
@@ -107,4 +112,9 @@
     @include typoGraphy(null, 500, 14px, 100%, 0, "#000000");
     text-decoration: none;
   }
+}
+
+.filters {
+  @include displayFlex(row, space-between, center);
+  column-gap: 1rem;
 }
