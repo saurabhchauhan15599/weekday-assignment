@@ -1,4 +1,4 @@
-import { Chip, Typography } from "@saurabh-chauhan/sc-components-library";
+import { Typography } from "@saurabh-chauhan/sc-components-library";
 import React from "react";
 import { IData } from "../../helpers/types";
 import styles from "./Card.module.scss";
@@ -11,7 +11,12 @@ const CardHeader: React.FC<ICardHeader> = ({ data }) => {
   return (
     <section className={styles.header}>
       <div className={styles.jobInfo}>
-        <img src={data.logoUrl} alt="logo" className={styles.logo} />
+        <img
+          src={data.logoUrl}
+          alt="logo"
+          className={styles.logo}
+          loading="lazy"
+        />
         <div className={styles.title}>
           <Typography className={styles.companyName}>
             {data.companyName}
