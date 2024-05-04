@@ -8,4 +8,4 @@
 
 ## Made by Saurabh Chauhan
 
-Hosted URL - [text](https://weekday-assignment-sc.vercel.app/)https://weekday-assignment-sc.vercel.app/
+Hosted URL - [](https://weekday-assignment-sc.vercel.app/)https://weekday-assignment-sc.vercel.app/
